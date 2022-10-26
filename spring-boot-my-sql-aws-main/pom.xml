@@ -12,6 +12,7 @@
 	<groupId>com.ustore-dashboard</groupId>
 	<artifactId>FileUploadInSpringBoot-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>FileUploadInSpringBoot-1</name>
 	<description>Upload CSV in Spring Boot</description>
 	<properties>
