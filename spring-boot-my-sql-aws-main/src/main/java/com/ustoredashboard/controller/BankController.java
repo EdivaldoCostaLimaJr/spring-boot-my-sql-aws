@@ -21,6 +21,7 @@ import com.univocity.parsers.common.record.Record;
 
 @RestController
 @RequestMapping(value="/upload", method=RequestMethod.POST)
+
 public class BankController {
 	
 	@Autowired
@@ -41,7 +42,12 @@ public class BankController {
 			account.setLineItemType(record.getString("lineItem/LineItemType"));
 			account.setBillType(record.getString("bill/BillType"));
 			account.setBillingEntity(record.getString("bill/BillingEntity"));
-			
+			account.setBillingPeriodStartDate(record.getString("bill/BillingPeriodStartDate"));
+			account.setBillingPeriodEndDate(record.getString("bill/BillingPeriodEndDate"));
+			account.setUnblendedRate(record.getString("lineItem/UnblendedRate"));
+			account.setUnblendedCost(record.getString("lineItem/UnblendedCost"));
+			account.setBlendedRate(record.getString("lineItem/BlendedRate"));
+			account.setBlendedCost(record.getString("lineItem/BlendedCost"));
 			accountList.add(account);
 		});
 		service.saveAll(accountList);

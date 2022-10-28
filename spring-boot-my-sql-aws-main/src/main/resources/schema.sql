@@ -6,5 +6,7 @@ CREATE TABLE account_details
    line_item_type VARCHAR (40),
    bill_type      VARCHAR (40),
    billing_entity VARCHAR (40),
+   billing_entityperiod_start_date VARCHAR (40),
+   billing_entityperiod_end_date VARCHAR (40),
    PRIMARY KEY (id)
    );
